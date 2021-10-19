@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Projetos de Pesquisa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="box">
+    <ion-label for="txtUsername">Usuário</ion-label>
+    <ion-input type="text" for="txtUsername" [(ngModel)]="username" placeholder="Digite seu usuário"></ion-input>
+
+    <ion-label for="txtPassword">Usuário</ion-label>
+    <ion-input type="password" for="txtPassword" [(ngModel)]="password" placeholder="Digite sua senha"></ion-input>
+
+    <div class="messageError">{{error}}</div>
+
+    <ion-button (click)="validar()">Entrar</ion-button>
+  </div>
+</ion-content>

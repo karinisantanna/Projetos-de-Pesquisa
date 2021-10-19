@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Projeto de pesquisa</ion-title>
+    <ion-button slot="end" (click)="logout()">Sair</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="box">
+    <ion-label>Titulo do projeto</ion-label>
+    <ion-input type="text" [(ngModel)]="titulo"></ion-input>
+
+    <ion-label>Data de Conclusão</ion-label>
+    <ion-datetime [(ngModel)]="data" displayFormat="DD-MMM-YYYY"
+      monthShortNames="jan, fev, mar, abr, maio, jun, jul, ago, set, out, nov, dez" doneText="OK" cancelText="Cancelar">
+    </ion-datetime>
+
+    <ion-label>Metodologia utilizada</ion-label>
+    <ion-textarea [(ngModel)]="metodologia"></ion-textarea>
+
+    <ion-label>Resultados esperados</ion-label>
+    <ion-textarea [(ngModel)]="resultados"></ion-textarea>
+
+    <ion-label>Conclusão</ion-label>
+    <ion-textarea [(ngModel)]="conclusao"></ion-textarea>
+
+    <div class="messageError">{{error}}</div>
+
+    <ion-button (click)="validar()">Cadastrar</ion-button>
+
+    <div class="status" *ngIf="cadastrado">
+      Status: <b>{{status}}</b>
+    </div>
+  </div>
+</ion-content>

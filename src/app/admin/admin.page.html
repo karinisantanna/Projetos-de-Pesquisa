@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Perfil administrador</ion-title>
+    <ion-button slot="end" (click)="logout()">Sair</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="box">
+    <ion-list *ngIf="!projeto">
+      <ion-label>Nenhum projeto cadastrado</ion-label>
+    </ion-list>
+    <div *ngIf="projeto">
+      <h2>Dados do projeto de pesquisa</h2>
+
+      <div class="dados">
+        <h2>Titulo</h2>
+        <p>{{projeto.titulo}}</p>
+
+        <h2>Data de conclusão estimada</h2>
+        <p>{{projeto.data | date: "dd/MM/yyyy"}}</p>
+
+        <h2>Metodologia</h2>
+        <p>{{projeto.metodologia}}</p>
+
+        <h2>Resultados</h2>
+        <p>{{projeto.resultados}}</p>
+
+        <h2>Conclusão</h2>
+        <p>{{projeto.conclusao}}</p>
+      </div>
+
+      <div class="center">
+        <h2>Alterar o status do projeto</h2>
+        <p>Status atual: <b>{{projeto.status}}</b></p>
+        <ion-button (click)="trocaStatus('em andamento')">em andamento</ion-button>
+        <ion-button (click)="trocaStatus('concluído')">concluído</ion-button>
+        <ion-button (click)="trocaStatus('pendências')">pendências</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

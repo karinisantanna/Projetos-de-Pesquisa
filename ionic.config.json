@@ -1,0 +1,7 @@
+{
+  "name": "projetos-de-pesquisa",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
