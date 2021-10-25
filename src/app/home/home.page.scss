@@ -1,0 +1,37 @@
+.box {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-top: 36px;
+}
+
+ion-item {
+  --background: #444;
+  height: 58px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid transparent;
+  border-radius: 4px;
+
+  &.item-has-focus,
+  &.item-has-value {
+    ion-label {
+      margin-top: 0;
+    }
+  }
+}
+
+ion-label.label-floating {
+  --ion-color-primary: #fff;
+  margin-top: 4px;
+}
+
+ion-input {
+  border: none;
+  text-indent: initial;
+  margin-bottom: 0;
+}
+
+ion-button {
+  height: 42px;
+  font-size: 16px;
+  font-weight: bold;
+}
