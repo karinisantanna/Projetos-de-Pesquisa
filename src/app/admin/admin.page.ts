@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SystemService } from '../system.service';
+import Project from '../classes/Project';
 
 @Component({
   selector: 'app-admin',
@@ -9,7 +10,7 @@ import { SystemService } from '../system.service';
 })
 export class AdminPage implements OnInit {
 
-  projeto: string;
+  projeto: Project;
 
   constructor(private service: SystemService, private router: Router) { }
 

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import Project from './classes/Project';
+import User from './classes/User';
 
 export const administrador = 1;
 export const pesquisador = 2;
@@ -8,9 +10,9 @@ export const pesquisador = 2;
   providedIn: 'root'
 })
 export class SystemService {
-  logado: any;
-  usuarios: any[];
-  projeto: any;
+  logado: User;
+  usuarios: User[];
+  projeto: Project;
 
   constructor(private router: Router) {
     this.usuarios = [
